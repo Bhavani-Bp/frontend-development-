@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+  <!-- not moving navbar -->
+  <nav class="navbar">
+    <button id="toggleButton" class="hamburger-icon">
+      <span class="material-icons">menu</span>
+    </button>
+    <div class="navbar-brand">My website</div>
+  </nav>
+
+  <!-- main full container area -->
+  <div class="container">
+    <!-- left menu collapsible -->
+    <aside class="left-menu" id="leftMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </aside>
+
+    <!-- main content -->
+    <main class="main-content">
+      <h1>Welcome to the Main Content</h1>
+      <p>This is the main content area. Resize the browser window to see the responsive layout in action.</p>
+    </main>
+
+    <!-- right side container -->
+    <aside class="right-panel">
+      <h2>Right panel</h2>
+      <p>This is the right side panel. It can contain additional information or links.</p>
+    </aside>
+  </div>
+
+  <!-- footer at down -->
+  <footer class="footer">
+    <p>&copy; My Website. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

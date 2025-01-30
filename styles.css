@@ -1,0 +1,124 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: transform 0.3s ease;
+}
+
+/* Fixed Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+#toggleButton {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 8px 16px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex: 1;
+    margin-top: 60px;
+    flex-wrap: wrap;
+    width: 100%; /* Full width */
+}
+
+/* Left Menu */
+.left-menu {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    transition: width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+
+.left-menu.collapsed {
+    width: 0;
+    padding: 0;
+}
+
+.left-menu ul {
+    list-style: none;
+    padding: 0; 
+}
+
+.left-menu ul li {
+    margin: 10px 0;
+}
+
+.left-menu ul li a {
+    text-decoration: none; 
+    color: #333; 
+    padding: 10px; /* Add padding for clickable area */
+    display: block; /* Make the entire area clickable */
+    border-radius: 5px; /* Add rounded corners */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.left-menu ul li a:hover {
+    background-color: #ddd; /* Change background on hover */
+    color: #000; /* Change text color on hover */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    min-width: 300px;
+    width: calc(100% - 250px); /* Adjust for left menu */
+}
+
+/* Right Panel */
+.right-panel {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 599px) {
+    .left-menu {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .right-panel {
+        width: 100%;
+        order: 3; /* Move right panel below main content */
+    }
+
+    .main-content {
+        order: 2;
+    }
+}
